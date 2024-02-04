@@ -34,6 +34,21 @@ def register():
         add_to_db(user)
     return render_template('register.html')
 
+@app.route('/file/upload', methods=['GET', 'POST'])
+def file_upload():
+    #code
+    return render_template('upload.html')
+
+@app.route('/file/list', methods=['GET', 'POST'])
+def file_list():
+    #code
+    return render_template('display_list.html')
+
+@app.route('/file/<int:id>/view/', methods=['GET', 'POST'])
+def file_view(id):
+    #code
+    return render_template('view_file.html')
+
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=8000, debug=True)
  
